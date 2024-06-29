@@ -10,7 +10,7 @@ It should hopefully generate a 2 page 履歴書 and a 職務経歴書.
 
 The schema is extended from https://www.jsonresume.org/schema with the following additional keys:
 
-```json
+```javascript
 {
   "basics": {
     ..., // other fields as is
