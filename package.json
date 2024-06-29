@@ -1,0 +1,13 @@
+{
+  "name": "jsonresume-theme-rirekisho",
+  "version": "1.0.0",
+  "description": "JSON resume theme in Japanese rirekisho format",
+  "main": "index.js",
+  "author": "DorskFR <dorsk.dev@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "volta": {
+    "node": "20.15.0",
+    "npm": "10.8.1"
+  }
+}
