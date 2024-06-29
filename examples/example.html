@@ -1,0 +1,688 @@
+
+    <!DOCTYPE html>
+    <html lang="ja">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>履歴書 - 田中 花子</title>
+      <style>
+        
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  @media print {
+    html, body {
+      width: 210mm;
+      height: 297mm;
+    }
+    .container {
+      width: 190mm;
+      height: 277mm;
+      margin: 10mm;
+      page-break-after: always;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Hiragino Kaku Gothic Pro", "Mincho MS", "Meiryo", sans-serif;
+    font-size: 8pt;
+    line-height: 1.3;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0px;
+  }
+
+  th {
+    font-weight: normal;
+  }
+
+  th, td {
+    border: 1px solid #000;
+    padding:6pt;
+  }
+
+  .container {
+    max-width: 210mm;
+    margin: 20pt auto;
+  }
+
+  .picture, .title, .date, .footnote  {
+    border: 0px;
+  }
+
+  .picture {
+    width: 120pt;
+  }
+
+  .image, .picture-instructions {
+    width: 90pt;
+    height: 120pt;
+    margin-block: 5pt;
+    margin-inline: 15pt;
+  }
+
+  .picture-instructions {
+    border: 1px dotted #000;
+    font-size: 8pt;
+    padding: 5pt;
+  }
+
+  .picture-instructions-title {
+    padding: 5pt;
+    display: block;
+  }
+
+  .birthdate{
+    text-align: right;
+  }
+
+  .joint > td, .joint > th {
+    border-top: 0px;
+  }
+
+  .title, .date {
+    padding-bottom: 0px;
+    vertical-align: bottom;
+    width: 50%;
+  }
+
+  .title > h1 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 18pt;
+    letter-spacing: 15pt;
+  }
+
+  .date {
+    text-align: right;
+  }
+
+  .furigana {
+    padding-block: 2pt;
+    padding-inline: 5pt;
+    margin: 0px;
+    font-size: 8pt;
+  }
+
+  .birthdate-title {
+    float: left;
+  }
+
+  .name {
+    vertical-align: top;
+  }
+
+  .name-title, .section-title, .history-type, .address-title {
+    text-align: left;
+  }
+
+  .name-title, .birthdate-title, .address-title {
+    font-size: 10pt;
+  }
+
+  .name-text {
+    text-align: center;
+    font-size: 16pt;
+    margin-bottom: -12pt;
+  }
+
+  .year, .month {
+    text-align: center;
+    vertical-align: center;
+  }
+
+  .year {
+    width: 12%;
+  }
+
+  .month {
+    width: 7%;
+  }
+
+  .circled {
+    border: 1px solid #000;
+    border-radius: 100%;
+    padding: 3pt;
+  }
+
+  .telephone {
+    width: 20%;
+    vertical-align: top;
+  }
+
+  .address {
+    height: 60pt;
+    vertical-align: top;
+  }
+
+  .address-text {
+    margin-left: 10%;
+  }
+
+  .address-note {
+    float: right;
+    font-size: 8pt;
+  }
+
+  .objectives {
+    height: 125pt;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .tablespace {
+    margin-top: 10pt;
+  }
+
+  .nobrake {
+    white-space: nowrap;
+  }
+
+  .kikan {
+    width: 100px;
+  }
+
+  .shokumu-keirekisho h1,
+  .shokumu-keirekisho h2,
+  .shokumu-keirekisho h3,
+  .shokumu-keirekisho .date-name {
+    margin-block: 10pt;
+  }
+
+  .shokumu-keirekisho h1 {
+    font-size: 18pt;
+    text-align: center;
+  }
+
+  .shokumu-keirekisho .date-name {
+    font-size: 10pt;
+    text-align: right;
+  }
+
+  .shokumu-keirekisho h2 {
+    font-size: 12pt;
+    border-bottom: 1px solid #000;
+  }
+
+  .shokumu-keirekisho h3 {
+    font-size: 10pt;
+  }
+
+  .shokumu-keirekisho table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5pt;
+  }
+
+  .shokumu-keirekisho th, .shokumu-keirekisho td {
+    border: 1px solid #000;
+    padding: 5pt;
+  }
+
+  .shokumu-keirekisho th {
+    background-color: #f0f0f0;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  .shokumu-keirekisho ul {
+    margin: 5pt 0;
+    padding-left: 20pt;
+  }
+
+  .shokumu-keirekisho .job {
+    margin-block: 0;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+  }
+
+  .skill-category {
+    break-inside: avoid;
+  }
+
+  @media print {
+    .page-break {
+      page-break-before: always;
+    }
+
+    .no-page-break, .job {
+      page-break-inside: avoid;
+    }
+
+    h2, h3 {
+      page-break-after: avoid;
+    }
+  }
+
+      </style>
+    </head>
+
+    <body>
+      <div class="container">
+        
+    <table>
+    <tr>
+      <td class="title">
+        <h1>履歴書</h1>
+      </td>
+      <td class="date">2024年　06月　29日 現在</td>
+      <td class="picture" rowspan="3">
+        
+  <div class="picture-instructions">
+    <span class="picture-instructions-title">写真をはる位置</span>
+    写真をはる必要が<br />
+    ある場合<br />
+    1. 縦　36〜40mm<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;横　24〜30mm<br />
+    2. 本人単身胸から上<br />
+    3. 裏面のりづけ
+  </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" class="furigana">ふりがな　　たなか はなこ</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="name">
+        <span class="name-title">氏 名</span><br />
+        <div class="name-text">田中 花子</div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" class="birthdate">
+      <span class="birthdate-title">生年月日</span>
+        1990年　05月　15日生（満　34歳）
+      </td>
+      <td>
+        ※性別 <span class="circled">女</span>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr class="joint">
+      <td colspan="2" class="furigana">ふりがな　　とうきょうとしぶやくじんぐうまえ</td>
+      <td rowspan="2" class="telephone">電話 <br /> 090-1234-5678</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="address">
+        <span class="address-title">現住所</span> 〒150-0001
+        <br /><div class="address-text">東京都渋谷区神宮前1-1-1</div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" class="furigana">ふりがな　　とうきょうとしんじゅくくにししんじゅく</td>
+      <td rowspan="2" class="telephone">電話 <br /> 03-9876-5432</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="address">
+        <span class="address-title">連絡先</span> 〒160-0023
+        <span class="address-note">（現住所以外に連絡を希望する場合に記入）</span><br />
+        <div class="address-text">東京都新宿区西新宿2-2-2<br />
+        E-mail: hanako.tanaka@example.com<br />
+        
+      LinkedIn: https://www.linkedin.com/in/hanakotanaka<br />
+      GitHub: https://github.com/hanako-tanaka<br />
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <table class="tablespace">
+    <tr>
+      <th class="year">年</th>
+      <th class="month">月</th>
+      <th>学歴・職歴(名別にまとめて書く)</th>
+    </tr>
+    <tr>
+      <th class="year"></th>
+      <th class="month"></th>
+      <th class="history-type">学歴</th>
+    </tr>
+        <tr>
+          <td class="year">2010</td>
+          <td class="month">04</td>
+          <td>東京工業大学・コンピューターサイエンス・学士・入学</td>
+        </tr>
+      
+        <tr>
+          <td class="year">2014</td>
+          <td class="month">03</td>
+          <td>東京工業大学・コンピューターサイエンス・学士・卒業</td>
+        </tr>
+      <tr>
+      <th class="year"></th>
+      <th class="month"></th>
+      <th class="history-type">インターンシップ・アルバイト</th>
+    </tr>
+        <tr>
+          <td class="year">2019</td>
+          <td class="month">01</td>
+          <td>コードフォージャパン・ボランティア講師・子供向けプログラミング教室でボランティア講師として活動</td>
+        </tr>
+      <tr>
+      <th class="year"></th>
+      <th class="month"></th>
+      <th class="history-type">職歴</th>
+    </tr>
+        <tr>
+          <td class="year">2014</td>
+          <td class="month">04</td>
+          <td>東京都千代田区・株式会社デジタルフロンティア・ソフトウェアエンジニア・入社</td>
+        </tr>
+      
+        <tr>
+          <td class="year">2018</td>
+          <td class="month">03</td>
+          <td>東京都千代田区・株式会社デジタルフロンティア・ソフトウェアエンジニア・退社</td>
+        </tr>
+      
+        <tr>
+          <td class="year">2018</td>
+          <td class="month">04</td>
+          <td>東京都渋谷区・テックイノベーション株式会社・シニアバックエンドエンジニア・入社・現在に至る</td>
+        </tr>
+      
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+  </table>
+
+  <table>
+    <tr>
+      <td class="footnote">※「性別」欄：記載は任意です。未記載とすることも可能です</td>
+    </tr>
+  </table>
+
+  <div class="page-break"></div>
+
+  <table class="tablespace">
+    <tr>
+      <th class="year">年</th>
+      <th class="month">月</th>
+      <th>学歴・職歴(名別にまとめて書く)</th>
+    </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+  </table>
+
+  <table>
+    <tr class="joint">
+      <th class="year">年</th>
+      <th class="month">月</th>
+      <th>免許・資格</th>
+    </tr>
+    
+      <tr>
+        <td class="year">2018</td>
+        <td class="month">12</td>
+        <td>TOEIC 920</td>
+      </tr>
+    
+      <tr>
+        <td class="year">2019</td>
+        <td class="month">06</td>
+        <td>AWS認定ソリューションアーキテクト - アソシエイト </td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+      <tr>
+        <td class="year"></td>
+        <td class="month"></td>
+        <td>&nbsp;</td>
+      </tr>
+    
+  </table>
+
+  <table class="tablespace">
+    <tr class="section-title">
+      <th>志望の動機、特技、好きな学科、アピールポイントなど</th>
+    </tr>
+    <tr class="objectives">
+      <td>革新的なテクノロジーを活用して社会に貢献できる職場で、自身のスキルを最大限に発揮したいと考えています。<br />特に、AI、IoT、クラウドコンピューティングの分野で新しい価値を創造することに情熱を持っています。<br />チームでの協力を大切にし、技術的なリーダーシップを発揮しながら、組織の成長に貢献していきたいと思います。<br /></td>
+    </tr>
+  </table>
+
+  <table class="tablespace">
+    <tr>
+      <th class="section-title">本人希望記入欄（特に給料・職種・勤務時間・勤務地・その他についての希望などがあれば記入）</th>
+    </tr>
+    <tr><td>勤務地：東京都内（リモートワーク可能な環境を希望）</td></tr><tr><td>職種：バックエンドエンジニア、ソリューションアーキテクト</td></tr><tr><td>給与：応相談</td></tr><tr><td>その他：継続的な学習機会や、国際的なプロジェクトに携わる機会があることを希望します</td></tr><tr><td>&nbsp</td></tr>
+  </table>
+  
+        <div class="page-break"></div>
+        
+    <div class="shokumu-keirekisho">
+      <h1>職務経歴書</h1>
+      <div class="date-name">
+        2024年06月29日<br />
+        田中 花子
+      </div>
+
+      <section class="no-page-break">
+        <h2>【職歴要約】</h2>
+        
+    テックイノベーション株式会社にてシニアバックエンドエンジニアとして6年2ヶ月勤務。
+    大規模データ処理システムの設計と実装を担当<br />
+  
+    株式会社デジタルフロンティアにてソフトウェアエンジニアとして4年勤務。
+    Webアプリケーション開発チームの一員として従事<br />
+  
+      </section>
+
+      <section class="no-page-break">
+        <h2>【経験・スキル】</h2>
+        <div class="skills-grid">
+          
+    <div>
+      <h3>◎バックエンド開発</h3>
+      <ul>
+        <li>Ruby on Rails</li><li>Node.js</li><li>Python</li><li>RESTful API設計</li>
+      </ul>
+    </div>
+  
+    <div>
+      <h3>◎クラウドインフラ</h3>
+      <ul>
+        <li>AWS</li><li>Docker</li><li>Kubernetes</li><li>サーバーレスアーキテクチャ</li>
+      </ul>
+    </div>
+  
+    <div>
+      <h3>◎データベース</h3>
+      <ul>
+        <li>MySQL</li><li>PostgreSQL</li><li>MongoDB</li><li>DynamoDB</li>
+      </ul>
+    </div>
+  
+        </div>
+      </section>
+
+      <section>
+        <h2>【職務経歴】</h2>
+        
+    <div class="job">
+      <h3>テックイノベーション株式会社</h3>
+      事業内容：大規模データ処理システムの設計と実装を担当
+      <table>
+        <tr>
+          <th class="kikan">期間</th>
+          <th>業務内容</th>
+        </tr>
+        <tr>
+          <td class="kikan"><span class="nobreak">2018年04月～</span><br /><span class="nobreak">現在</span></td>
+          <td>
+            シニアバックエンドエンジニア<br />
+            <ul>
+              <li>マイクロサービスアーキテクチャを導入し、システムの柔軟性と拡張性を向上</li><li>AWS Lambda、S3、DynamoDBを活用したサーバーレスアプリケーションの開発</li><li>CI/CDパイプラインの構築によりデプロイメント時間を50%削減</li><li>新人エンジニアのメンタリングとチーム全体のスキル向上に貢献</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+  
+    <div class="job">
+      <h3>株式会社デジタルフロンティア</h3>
+      事業内容：Webアプリケーション開発チームの一員として従事
+      <table>
+        <tr>
+          <th class="kikan">期間</th>
+          <th>業務内容</th>
+        </tr>
+        <tr>
+          <td class="kikan"><span class="nobreak">2014年04月～</span><br /><span class="nobreak">2018年03月</span></td>
+          <td>
+            ソフトウェアエンジニア<br />
+            <ul>
+              <li>Ruby on RailsとReactを使用した複数のWebアプリケーションの開発</li><li>RESTful APIの設計と実装</li><li>データベース最適化によりクエリ処理速度を30%改善</li><li>アジャイル開発手法の導入に貢献</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+  
+      </section>
+
+      <section class="no-page-break">
+        <h2>【資格・特技】</h2>
+        AWS認定ソリューションアーキテクト - アソシエイト  (2019-06)<br/>TOEIC 920 (2018-12)<br/>
+      </section>
+
+      <section class="no-page-break">
+        <h2>【活かせる経験・知識・技術等】</h2>
+        高度な問題解決能力：複雑なシステム設計や性能最適化の経験から、多角的な視点で問題を分析し、効果的なソリューションを提案できます。<br />最新技術への適応力：常に新しい技術トレンドをキャッチアップし、プロジェクトに適切に導入してきました。特にクラウドネイティブ技術やコンテナ化に関する深い知識と実践経験があります。<br />チームリーダーシップ：後輩エンジニアのメンタリングや技術指導を通じて、チーム全体のスキル向上に貢献してきました。また、アジャイル開発手法を取り入れ、チームの生産性を向上させた実績があります。<br />グローバルコミュニケーション：英語でのコミュニケーション能力を活かし、海外チームとの協業プロジェクトでブリッジ役を務めた経験があります。<br />
+      </section>
+
+      <section class="no-page-break">
+        <h2>【自己PR】</h2>
+        私は常に新しい技術に挑戦し、学び続けることを大切にしています。大学での研究や、これまでの実務経験を通じて、複雑な問題を分析し、効率的なソリューションを見出す能力を磨いてきました。<br />チーム内でのコミュニケーションを重視し、メンバー間の知識共有や技術向上に積極的に取り組んでいます。また、顧客や他部門との協力を通じて、ビジネスニーズを深く理解し、それに応える技術ソリューションを提案・実装してきました。<br />今後は、これまでの経験を活かしつつ、AI、機械学習などの先端技術を取り入れた革新的なプロダクト開発に挑戦したいと考えています。技術とビジネスの両面から価値を創造し、社会に貢献できるエンジニアを目指しています。<br />
+      </section>
+    </div>
+  
+      </div>
+    </body>
+    </html>
+  
