@@ -30,7 +30,7 @@ The schema is extended from https://www.jsonresume.org/schema with the following
     ..., // other fields as is
     "nameFurigana": "",
     "gender": "", // can be empty, `male` or `female`
-    "birthDate": "", // 1970-01-**01**
+    "birthDate": "", // 1970-01-01
     "location" : {
       ...,
       "furigana": "" // ふりがな
