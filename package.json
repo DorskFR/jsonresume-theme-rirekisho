@@ -7,7 +7,7 @@
   "license": "MIT",
   "type": "module",
   "volta": {
-    "node": "22.22.2",
+    "node": "22.23.0",
     "npm": "11.17.0"
   }
 }
