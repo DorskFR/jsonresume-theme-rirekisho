@@ -224,21 +224,30 @@ const generateEducationRows = (education) => {
 };
 
 const generateWorkRows = (work) => {
+  const isPromotionExit = (job) =>
+    (work || []).some(
+      (next) =>
+        next.promotion && next.name === job.name && next.startDate === job.endDate,
+    );
   return [
     ...(work || []).map((job) => ({
       date: job.startDate,
-      event: [
-        job.location,
-        job.name,
-        job.position,
-        "入社",
-        !job.endDate && "現在に至る",
-      ]
-        .filter((v) => v)
-        .join("・"),
+      event: job.promotion
+        ? [`${job.position}に昇格`, !job.endDate && "現在に至る"]
+            .filter((v) => v)
+            .join("・")
+        : [
+            job.location,
+            job.name,
+            job.position,
+            "入社",
+            !job.endDate && "現在に至る",
+          ]
+            .filter((v) => v)
+            .join("・"),
     })),
     ...(work || [])
-      .filter((job) => job.endDate)
+      .filter((job) => job.endDate && !isPromotionExit(job))
       .map((job) => ({
         date: job.endDate,
         event: [job.location, job.name, job.position, "退社"]

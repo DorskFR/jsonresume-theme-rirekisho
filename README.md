@@ -72,6 +72,14 @@ The schema is extended from https://www.jsonresume.org/schema with the following
   ],
   "volunteer": [
     // same schema but used for internships and small jobs
+  ],
+  "work": [
+    {
+      ...,
+      "promotion": true // renders a single `〜に昇格` line in the `履歴書` `職歴` section
+                        // instead of a `退社`/`入社` pair, when this entry's `startDate`
+                        // matches the previous entry's `endDate` at the same company
+    }
   ]
 }
 ```

@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-rirekisho",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "JSON resume theme in Japanese rirekisho format",
   "main": "index.js",
   "author": "DorskFR <dorsk.dev@gmail.com>",
