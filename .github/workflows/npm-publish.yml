@@ -4,6 +4,7 @@
 name: Node.js Package
 
 on:
+  pull_request:
   release:
     types: [created]
 
@@ -12,19 +13,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 26
       - run: npm ci
 
   publish-npm:
     needs: build
+    if: github.event_name == 'release'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 26
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm publish
